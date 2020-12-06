@@ -1,24 +1,49 @@
 <!DOCTYPE html>
-<html>
-    <title>Pilotage de volet</title>
+<html lang="fr">
 
-    
-    <body>
-        
-        
-        
-        <div class="container">
- 
-          <div class="range-slider">
-            <input type="range" orient="vertical" min="0" max="100" />
-          </div> 
-          
-          <p class="debug">DEBUG : <span class="volet-fermeture-valeur">VALEUR</span> </p>
-          
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pilotage de volet</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+
+  </style>
+</head>
+
+<body class="container">
+    <div class="fenetre">
+      <input type="range" id="range" class="input-range" min="0" max="10" value="1">
+      <div class="stores">
+        <div class="latte">
         </div>
-                
-                
-        
-    </body>
+      </div>
+    </div>
+</body>
+
+<script>
+  document.getElementById('range').addEventListener('input', majLattes);
+  function majLattes() {
+    value = document.getElementById('range').value;
+    stores = document.getElementsByClassName('stores')[0];
+    latte =  document.getElementsByClassName('latte');
+    //Effacer toutes les lattes
+    stores.innerHTML = '';
+    //Création et affichage des lattes
+    for (i = 0; i < value; i++) {
+      var latte = document.createElement('div');
+      latte.className = 'latte';
+    
+      stores.append(latte);
+    }
+    maxRange = document.getElementById('range').getAttribute('max');
+    if(value == maxRange){
+      latte = document.getElementsByClassName('latte');
+      for(i=0;i<latte.length;i++){
+        latte[i].classList.add("droit");
+      }    
+    }
+  }
+</script>
+
 </html>
-<!--La solution est sur https://codepen.io/jim005 -->

@@ -1,0 +1,70 @@
+.container {
+  /* Comportement */
+  display: -ms-flexbox;             /* Permet aux enfants d'utiliser les propriétés flex */
+  display: flex;                    /* Permet aux enfants d'utiliser les propriétés flex */ 
+  -ms-flex-pack: center;            /* Aligner ses enfants horizontalement au centre */
+  justify-content: center;          /* Aligner ses enfants horizontalement au centre */
+  align-items: center;              /* Aligner ses enfants verticalement au centre */
+  /* Dimension */
+  width: 50vw;                      /* Largeur correspond à 50% de la largeur affichage appareil */
+  height: 100vh;                    /* Hauteur correspond à l'hauteur de l'affichage appareil */
+  /* Espacement */
+  margin: 0 auto;                   /* Marge exterieur bas et haut à 0 et gauche et droite auto */
+}
+
+.fenetre {
+  /* Position */
+  position: relative;                /* Position de l'element relative */
+  /* Dimension */
+  height: 400px;                     /* Hauteur de 400px */
+  width: 400px;                      /* Largeur de 400px */
+}
+
+.stores {
+  /* Dimension */
+  width: 100%;                        /* Largeur 100% de la largeur de son parent */
+  height: 390px;                      /* Hauteur de 390px */
+  /* Apparence */
+  background-color: #FFEFCA;        /* Définir la couleur du fond */
+}
+
+.input-range {
+  /* Position */
+  position: absolute;                 /* Associer la position de l'element à son parent */
+  left: 30px;                         /* Espace sur la gauche de 30px par rapport à son parent */
+  /* Dimension */
+  width: 400px;                       /* Largeur de 400px */
+  /* Apparence */
+  -webkit-transform: rotate(90deg);   /* Mettre l'input vertical sur Chrome, safari */
+  transform: rotate(90deg);           /* Mettre l'input vertical sur autres  */
+  -webkit-transform-origin: left top; /* Déplacer l'origin pour le positionner correctement */
+  -webkit-appearance: none;           /* Supprime le style par défaut du navigateur */
+  background-color: transparent;      /* Définir la couleur du fond en transparent */
+  outline: none;                      /* Supprime le contour de la barre */
+
+}
+
+input[type=range]::-webkit-slider-thumb {
+  /* Dimension */
+  width: 30px;
+  height: 30px;
+  /* Apparence */
+  -webkit-appearance: none;           /* Supprime le style par défaut du navigateur */
+  border-radius: 50px;                /* Bord arrondis */
+  background-color: #FF9300;        /* Couleur de fond */
+}
+
+.latte {
+  /* Dimension */
+  height: 30px;                       /* Hauteur de 30px */
+  /* Espacement */
+  margin-bottom: 10px;                /* Marge exterieur inférieur de 10px */
+  /* Apparence */
+  background-color: #D59D07;        /* Couleur de fond */
+  transform: skew(15deg);             /* Effectue une distortion de 15 deg */
+}
+
+.droit {
+  /* Apparence */
+  transform: skew(0deg);              /* Effectue une distortion de 0 deg */
+}
